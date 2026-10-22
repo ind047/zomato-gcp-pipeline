@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: raw
+    database: zomato-replica-pipeline
+    schema: zomato_raw
+    tables:
+      - name: restaurants_raw
+        description: "Raw data for restaurants"
+      - name: users_raw
+        description: "Raw data for users"
+      - name: food_raw
+        description: "Raw data for food"
+      - name: menu_raw
+        description: "Raw data for menu"
+      - name: reviews_raw
+        description: "Raw data for reviews"
+      - name: orders_raw
+        description: "Raw data for orders"
+      - name: order_items_raw
+        description: "Raw data for order items"
