@@ -1,0 +1,24 @@
+version: 2
+models:
+  - name: fct_orders
+    columns:
+      - name: order_id
+        description: "Unique identifier for each order"
+        tests: [unique, not_null]
+      - name: customer_id
+        description: "Identifier for the customer who placed the order"
+        tests: 
+          - relationships: { to: ref('dim_customer'), field: customer_id}
+      - name: order_status
+        description: "Status of the order (e.g., completed, pending, canceled)"
+        tests:
+          - accepted_values: { values: ['Delivered', 'Cancelled', 'Refunded'] }
+      - name: fct_order_items
+        columns:
+          - name: order_item_id
+            description: "Unique identifier for each item in the order"
+            tests: [unique, not_null]
+          - name: order_id
+            description: "Identifier for the order to which this item belongs"
+            tests:
+              - relationships: { to: ref('fct_orders'), field: order_id }

@@ -34,10 +34,12 @@ models:
     dims:
       +materialized: table
       +schema: dims
-    staging:
-      +materialized: views
-      +schema: staging
+    facts:
+      +schema: facts
     marts:
-      +materialized: table
+      +materialized: tables
       +schema: marts
+    staging:
+      +materialized: view
+      +schema: staging
 
