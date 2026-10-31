@@ -3,7 +3,10 @@
         materialized='incremental',
         unique_key='order_id',
         incremental_strategy='merge',
-        filter='order_date > (select min(date_day) from {{this}})'
+        partition_by ={
+            'field':'order_date',
+            'data_type':'date'
+        }
     )
 }}
 

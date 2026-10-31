@@ -37,7 +37,7 @@ models:
     facts:
       +schema: facts
     marts:
-      +materialized: tables
+      +materialized: table
       +schema: marts
     staging:
       +materialized: view
