@@ -1,0 +1,9 @@
+version: 2
+sources: 
+  - name: ai
+    database: zomato-replica-pipeline
+    schema: ai
+    description: "LLM-enriched tables for zomato data"
+    tables:
+      - name: review_enriched
+        description: "Enriched reviews with sentiment, topic, and key issues"
