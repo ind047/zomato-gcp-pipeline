@@ -2357,6 +2357,7 @@ source = { editable = "." }
 dependencies = [
     { name = "dbt-bigquery" },
     { name = "dbt-core" },
+    { name = "google-cloud-bigquery" },
     { name = "google-genai" },
 ]
 
@@ -2364,5 +2365,6 @@ dependencies = [
 requires-dist = [
     { name = "dbt-bigquery", specifier = ">=1.12.1" },
     { name = "dbt-core", specifier = ">=1.12.6" },
+    { name = "google-cloud-bigquery", specifier = ">=3.46.2" },
     { name = "google-genai", specifier = ">=1.75.0" },
 ]
