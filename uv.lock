@@ -2357,10 +2357,12 @@ source = { editable = "." }
 dependencies = [
     { name = "dbt-bigquery" },
     { name = "dbt-core" },
+    { name = "google-genai" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "dbt-bigquery", specifier = ">=1.12.1" },
     { name = "dbt-core", specifier = ">=1.12.6" },
+    { name = "google-genai", specifier = ">=1.75.0" },
 ]

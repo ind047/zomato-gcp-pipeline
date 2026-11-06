@@ -5,7 +5,7 @@
         incremental_strategy='merge',
         partition_by={'field': 'order_date', 'data_type': 'date'},
         incremental_predicates=["
-        DBT_INTERNAL_DEST.order_date >= date_sub(date '{{run_started_at}}', interval 3 day)"]
+        DBT_INTERNAL_DEST.order_date >= date_sub(CURRENT_DATE(), interval 3 day)"]
     )
 }}
 
